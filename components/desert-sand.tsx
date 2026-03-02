@@ -28,7 +28,11 @@ export function DesertSand(): React.JSX.Element {
       uColorDark: { value: new THREE.Color(SAND_COLORS.dark) }
     };
 
-    const material = new THREE.ShaderMaterial({ vertexShader: VERTEX_SHADER, fragmentShader: FRAGMENT_SHADER, uniforms });
+    const material = new THREE.ShaderMaterial({
+      vertexShader: VERTEX_SHADER,
+      fragmentShader: FRAGMENT_SHADER,
+      uniforms
+    });
 
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);

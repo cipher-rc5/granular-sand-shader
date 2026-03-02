@@ -1,4 +1,5 @@
 # Directory Structure
+
 ```
 app/
   globals.css
@@ -17,6 +18,7 @@ tsconfig.json
 # Files
 
 ## File: app/globals.css
+
 ```css
 @import "tailwindcss";
 
@@ -29,6 +31,7 @@ tsconfig.json
 ```
 
 ## File: app/layout.tsx
+
 ```typescript
 // file: app/layout.tsx
 // description: Root layout component for Next.js application
@@ -56,6 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps): React.JSX.Ele
 ```
 
 ## File: app/page.tsx
+
 ```typescript
 // file: app/page.tsx
 // description: Main page component with granular sand shader and UI overlay
@@ -74,7 +78,9 @@ export default function Home(): React.JSX.Element {
       <div className='relative z-10 w-full max-w-4xl px-8 flex flex-col items-center'>
         <div className='space-y-4 text-center'>
           <h1 className='text-6xl md:text-8xl font-thin tracking-tight text-sand-text/80 drop-shadow-sm'>Granular</h1>
-          <p className='text-sand-subtle/60 tracking-[0.6em] uppercase text-xs font-light'>High-definition micro-sands</p>
+          <p className='text-sand-subtle/60 tracking-[0.6em] uppercase text-xs font-light'>
+            High-definition micro-sands
+          </p>
         </div>
 
         <div className='mt-16'>
@@ -89,7 +95,9 @@ export default function Home(): React.JSX.Element {
           <span className='text-[10px] font-mono tracking-tighter'>GRN_SIZE: 0.004mm</span>
           <span className='text-[10px] font-mono tracking-tighter'>DENSITY: HIGH</span>
         </div>
-        <div className='text-[9px] uppercase tracking-[0.5em] text-sand-text opacity-30'>Tactile Texture Simulation</div>
+        <div className='text-[9px] uppercase tracking-[0.5em] text-sand-text opacity-30'>
+          Tactile Texture Simulation
+        </div>
       </div>
     </div>
   );
@@ -97,6 +105,7 @@ export default function Home(): React.JSX.Element {
 ```
 
 ## File: components/desert-sand.tsx
+
 ```typescript
 // file: components/desert-sand.tsx
 // description: WebGL shader component for granular sand texture using Three.js
@@ -128,7 +137,11 @@ export function DesertSand(): React.JSX.Element {
       uColorDark: { value: new THREE.Color(SAND_COLORS.dark) }
     };
 
-    const material = new THREE.ShaderMaterial({ vertexShader: VERTEX_SHADER, fragmentShader: FRAGMENT_SHADER, uniforms });
+    const material = new THREE.ShaderMaterial({
+      vertexShader: VERTEX_SHADER,
+      fragmentShader: FRAGMENT_SHADER,
+      uniforms
+    });
 
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -167,6 +180,7 @@ export function DesertSand(): React.JSX.Element {
 ```
 
 ## File: lib/shader-constants.ts
+
 ```typescript
 // file: lib/shader-constants.ts
 // description: GLSL shader source code for granular white sand texture
@@ -266,6 +280,7 @@ export const SAND_COLORS = { light: '#EEEBE5', dark: '#E2D2C3' } as const;
 ```
 
 ## File: types/shader.types.ts
+
 ```typescript
 // file: types/shader.types.ts
 // description: Type definitions for WebGL shader uniforms and Three.js objects
@@ -287,6 +302,7 @@ export interface DesertSandColors {
 ```
 
 ## File: package.json
+
 ```json
 {
   "name": "granular-sand-shader",
@@ -299,12 +315,7 @@ export interface DesertSandColors {
     "lint": "next lint",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
-    "next": "^16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "three": "^0.183.1"
-  },
+  "dependencies": { "next": "^16.1.6", "react": "^19.2.4", "react-dom": "^19.2.4", "three": "^0.183.1" },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
     "@types/bun": "^1.3.9",
@@ -318,6 +329,7 @@ export interface DesertSandColors {
 ```
 
 ## File: tsconfig.json
+
 ```json
 {
   "compilerOptions": {
