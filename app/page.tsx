@@ -14,8 +14,12 @@ export default function Home(): React.JSX.Element {
 
       <div className='relative z-10 w-full max-w-4xl px-8 flex flex-col items-center'>
         <div className='space-y-4 text-center'>
-          <h1 className='text-6xl md:text-8xl font-thin tracking-tight text-sand-text/80 drop-shadow-sm'>Granular</h1>
-          <p className='text-sand-subtle/60 tracking-[0.6em] uppercase text-xs font-light'>High-definition micro-sands</p>
+          <h1 className='text-6xl md:text-8xl font-thin tracking-tight text-sand-text/80 drop-shadow-sm'>
+            Granular
+          </h1>
+          <p className='text-sand-subtle/60 tracking-[0.6em] uppercase text-xs font-light'>
+            High-definition micro-sands
+          </p>
         </div>
 
         <div className='mt-16'>
@@ -30,7 +34,9 @@ export default function Home(): React.JSX.Element {
           <span className='text-[10px] font-mono tracking-tighter'>GRN_SIZE: 0.004mm</span>
           <span className='text-[10px] font-mono tracking-tighter'>DENSITY: HIGH</span>
         </div>
-        <div className='text-[9px] uppercase tracking-[0.5em] text-sand-text opacity-30'>Tactile Texture Simulation</div>
+        <div className='text-[9px] uppercase tracking-[0.5em] text-sand-text opacity-30'>
+          Tactile Texture Simulation
+        </div>
       </div>
     </div>
   );
